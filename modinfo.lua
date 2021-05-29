@@ -2,7 +2,7 @@
 name = "Wurt And Merm AI Tweaks"
 description = ""
 author = "Zeta"
-version = "1.0.2" -- This is the version of the template. Change it to your own number.
+version = "1.1.0" -- This is the version of the template. Change it to your own number.
 
 -- This is the URL name of the mod's thread on the forum; the part after the ? and before the first & in the url
 forumthread = ""
@@ -31,6 +31,28 @@ server_filter_tags = {
 
 configuration_options = {
 	{
+		name = 'ENABLE_SMARTER_MERM',
+		label = 'Enable smarter merm',
+		options = {
+			{ description = 'Yes', data = true },
+			{ description = 'No', data = false }
+		},
+		default = true
+	},
+	{
+		name = 'MERM_EPIC_DODGE_CHANCE',
+		label = 'Merm boss attack dodge chance',
+		options = {
+			{ description = 'Disabled', data = 0 },
+			{ description = '25%', data = 0.25 },
+			{ description = '50%', data = 0.5 },
+			{ description = '75%', data = 0.75 },
+			{ description = '100%', data = 1 }
+		},
+		default = 1,
+		hover = 'How likely merms try to dodge boss attack'
+	},
+	{
 		name = 'ENABLE_WURT_MOD',
 		label = 'Enable Wurt mod',
 		options = {
@@ -38,5 +60,5 @@ configuration_options = {
 			{ description = 'No', data = false }
 		},
 		default = false
-	}
+	},
 }
